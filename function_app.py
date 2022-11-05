@@ -1,3 +1,4 @@
+"""functions initial file"""
 import azure.functions as func
 import logging
 
@@ -9,7 +10,7 @@ app = func.FunctionApp()
 
 
 @app.function_name(name="HttpTrigger1")
-@app.route(route="login")
+@app.route(route="login",auth_level=func.AuthLevel.ANONYMOUS)
 def test_function(req: func.HttpRequest) -> func.HttpResponse:
     """
     The test_function function is used to test the HTTP trigger function.
