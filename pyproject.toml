@@ -8,6 +8,9 @@ packages = [{include = "sso_testing"}]
 
 [tool.poetry.dependencies]
 python = "^3.8"
+fastapi = "^0.86.0"
+uvicorn = {extras = ["standard"], version = "^0.19.0"}
+python3-saml = "^1.14.0"
 
 
 [build-system]
